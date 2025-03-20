@@ -1,0 +1,12 @@
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    margin-right: 10px;
+  }
+  
+  .social-icons a:hover {
+    color: #f79504;
+  }
+  

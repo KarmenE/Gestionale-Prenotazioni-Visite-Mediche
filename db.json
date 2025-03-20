@@ -1,0 +1,189 @@
+{
+  "users": [
+    {
+      "email": "carmen@gmail.com",
+      "password": "$2a$10$k.Glqh4f7S6f7sERFNpxxuzbymR8Fsz2pGs3VJfEprODsy89Ey9K2",
+      "name": "carmen",
+      "surname": "soltanel",
+      "cf": "SLTCMN92P57Z129K",
+      "id": 3
+    }
+  ],
+  "visite": [
+    {
+      "id": 1,
+      "tipoVisita": "Visita Cardiologica",
+      "descrizione": "Valutazione completa del sistema cardiovascolare",
+      "durata": "30 minuti",
+      "prezzo": 50
+    }
+  ],
+  "prenotazioni": [
+    {
+      "utenteId": 1,
+      "tipoVisita": "Visita Cardiologica",
+      "data": "2025-03-01",
+      "orario": "09:00",
+      "note": "",
+      "id": 1
+    },
+    {
+      "utenteId": 1,
+      "tipoVisita": "Visita Dermatologica",
+      "data": "2025-03-01",
+      "orario": "10:00",
+      "note": "",
+      "id": 2
+    },
+    {
+      "utenteId": 2,
+      "tipoVisita": "Visita Pneumologica",
+      "data": "2025-03-01",
+      "orario": "15:00",
+      "note": "",
+      "id": 22
+    },
+    {
+      "utenteId": 2,
+      "tipoVisita": "Visita Neurologica",
+      "data": "2025-03-01",
+      "orario": "15:00",
+      "note": "",
+      "id": 23
+    },
+    {
+      "utenteId": 2,
+      "tipoVisita": "Visita Endocrinologica",
+      "data": "2025-03-01",
+      "orario": "09:00",
+      "note": "",
+      "id": 24
+    },
+    {
+      "id": 25,
+      "utenteId": 3,
+      "tipoVisita": "Visita Oculistica",
+      "note": "",
+      "data": "2025-03-01",
+      "orario": "11:00"
+    },
+    {
+      "id": 26,
+      "utenteId": 3,
+      "tipoVisita": "Visita Pneumologica",
+      "note": "",
+      "data": "2025-03-01",
+      "orario": "10:00"
+    }
+  ],
+  "disponibilita": [
+    {
+      "id": 1,
+      "tipoVisita": "Visita Cardiologica",
+      "data": "2025-03-01",
+      "orariDisponibili": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "14:00"
+      ]
+    },
+    {
+      "id": 2,
+      "tipoVisita": "Visita Dermatologica",
+      "data": "2025-03-01",
+      "orariDisponibili": [
+        "10:00",
+        "11:00",
+        "12:00",
+        "15:00"
+      ]
+    },
+    {
+      "id": 3,
+      "tipoVisita": "Visita Oculistica",
+      "data": "2025-03-01",
+      "orariDisponibili": [
+        "10:00",
+        "09:00",
+        "14:00"
+      ]
+    },
+    {
+      "id": 4,
+      "tipoVisita": "Visita Ortopedica",
+      "data": "2025-03-01",
+      "orariDisponibili": [
+        "10:00",
+        "11:00",
+        "12:00",
+        "15:00"
+      ]
+    },
+    {
+      "id": 5,
+      "tipoVisita": "Visita Ginecologica",
+      "data": "2025-03-01",
+      "orariDisponibili": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "14:00"
+      ]
+    },
+    {
+      "id": 6,
+      "tipoVisita": "Visita Otorinolaringoiatrica",
+      "data": "2025-03-01",
+      "orariDisponibili": [
+        "10:00",
+        "11:00",
+        "12:00",
+        "15:00"
+      ]
+    },
+    {
+      "id": 7,
+      "tipoVisita": "Visita Endocrinologica",
+      "data": "2025-03-01",
+      "orariDisponibili": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "14:00"
+      ]
+    },
+    {
+      "id": 8,
+      "tipoVisita": "Visita Neurologica",
+      "data": "2025-03-01",
+      "orariDisponibili": [
+        "10:00",
+        "11:00",
+        "12:00",
+        "15:00"
+      ]
+    },
+    {
+      "id": 9,
+      "tipoVisita": "Visita Gastroenterologica",
+      "data": "2025-03-01",
+      "orariDisponibili": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "14:00"
+      ]
+    },
+    {
+      "id": 10,
+      "tipoVisita": "Visita Pneumologica",
+      "data": "2025-03-01",
+      "orariDisponibili": [
+        "11:00",
+        "12:00",
+        "15:00"
+      ]
+    }
+  ]
+}

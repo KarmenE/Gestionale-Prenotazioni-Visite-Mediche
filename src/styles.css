@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body {
+    padding-top: 80px; /* spazio per la navbar fixed */
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-snack-bar-container {
+    margin-top: 90px !important;
+}
+
+

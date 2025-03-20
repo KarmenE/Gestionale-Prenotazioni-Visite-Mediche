@@ -1,0 +1,51 @@
+
+  <div class="container my-4">
+    <h1 class="text-center">{{ visita.tipoVisita }}</h1>
+  
+    <div class="card border-primary mt-4">
+      <div class="card-header bg-dark text-white">
+        <h5>Prestazioni Erogate</h5>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li *ngFor="let prestazione of visita.prestazioni">{{ prestazione }}</li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="card border-success mt-4">
+      <div class="card-header bg-dark text-white">
+        <h5>I Nostri Medici Specialisti</h5>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li *ngFor="let medico of visita.medici">{{ medico }}</li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="card border-warning mt-4">
+      <div class="card-header bg-dark text-white">
+        <h5>Per Prenotare Telefonicamente</h5>
+      </div>
+      <div class="card-body">
+        <p class="fs-5"><strong>Telefono:</strong> {{ visita.telefono }}</p>
+      </div>
+    </div>
+  
+    <div class="card border-info mt-4">
+      <div class="card-header bg-dark text-white">
+        <h5>Per Prenotare Allo Sportello</h5>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li *ngFor="let orario of visita.orariSportello">{{ orario }}</li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="text-center mt-4">
+      <button class="btn btn-dark btn-lg" (click)="prenota()">Prenota Online</button>
+    </div> <br>
+  </div>
+  

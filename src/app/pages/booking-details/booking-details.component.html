@@ -1,0 +1,32 @@
+
+<div *ngIf="prenotazione" class="card">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h5 class="mb-0">Dettaglio prenotazione</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="close.emit()"></button>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>Tipo di visita</th>
+          <th>Data</th>
+          <th>Orario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>{{ prenotazione.tipoVisita }}</strong></td>
+          <td><strong>{{ prenotazione.data }}</strong></td>
+          <td><strong>{{ prenotazione.orario }}</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-center gap-2 mt-3">
+      <button class="btn btn-dark" (click)="editPrenotazione()">Modifica</button>
+      <button class="btn btn-danger" (click)="deletePrenotazione()">Elimina</button>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,15 @@
+/* a {
+    text-decoration: none;
+    color: orange;
+}
+
+a:hover {
+    color: rgb(128, 76, 12);
+}*/
+
+.carousel-item img {
+    height: 600px;       
+    width: 100%;          
+    object-fit: cover;    
+}
+   

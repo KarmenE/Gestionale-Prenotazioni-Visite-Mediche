@@ -1,0 +1,31 @@
+
+<div class="container my-4">
+  <h1 class="text-center mb-4">Disponibilità per la {{ tipoVisita }}</h1>
+  <table class="table table-striped table-bordered" *ngIf="disponibilitaList.length > 0; else noDisponibilita">
+    <thead>
+      <tr>
+        <th scope="col" class="text-center">Tipo di visita</th>
+        <th scope="col" class="text-center">Data</th>
+        <th scope="col" class="text-center">Orario</th>
+        <th scope="col" class="text-center">Azione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let disponibilita of disponibilitaList">
+        <tr *ngFor="let orario of disponibilita.orariDisponibili">
+          <td>{{ tipoVisita }}</td>
+          <td>{{ disponibilita.data }}</td>
+          <td>{{ orario }}</td>
+          <td class="text-center">
+            <button class="btn btn-dark btn-sm" (click)="prenota(disponibilita, orario)">Prenota</button>
+
+            <!-- <button (click)="updatePrenotazione(disponibilita.data, orario)">Prenota</button> -->
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  <ng-template #noDisponibilita>
+    <p class="text-center">Nessuna disponibilità trovata per questa visita.</p>
+  </ng-template>
+</div>

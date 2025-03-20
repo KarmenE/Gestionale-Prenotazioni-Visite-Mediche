@@ -1,0 +1,25 @@
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow" style="width: 500px;">
+
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <h2 class="text-center mb-4">Login</h2>
+        
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required autofocus placeholder="Email" [(ngModel)]="email">
+        </div>
+        
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required placeholder="Password">
+        </div>
+        
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-dark">Accedi</button>
+        </div>
+      </form>
+
+    </div>
+</div>
+  

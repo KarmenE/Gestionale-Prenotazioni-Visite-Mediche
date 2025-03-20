@@ -1,0 +1,38 @@
+/* a {
+    text-decoration: none;
+    color: orange;
+}
+
+a:hover {
+    color: rgb(128, 76, 12);
+} */
+
+a {
+text-decoration: none;
+color: orange;
+}
+
+a:hover {
+color: rgb(128, 76, 12);
+}
+
+
+/* Stili specifici per il link di login */
+.login-link {
+color: orange;
+}
+
+.login-link:hover {
+color: rgb(128, 76, 12);
+}
+
+/* Puoi definire stili differenti per il link di logout, se necessario */
+.logout-link {
+color: red;
+}
+
+.logout-link:hover {
+/* Imposta un colore diverso per l'hover, se lo desideri */
+color: darkred;
+}
+  

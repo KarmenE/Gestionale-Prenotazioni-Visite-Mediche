@@ -1,0 +1,49 @@
+
+<div class="container my-5">
+  <h1 class="text-center">Area Personale</h1>
+  
+  <div *ngIf="prenotazioni.length > 0; else nessunaPrenotazione">
+    <div class="row justify-content-center">
+      
+      <div [ngClass]="{'col-md-8': showBookingDetails, 'col-md-12': !showBookingDetails}">
+        
+        <table class="table table-bordered text-center">
+          <thead class="table-dark">
+            <tr>
+              <th>Tipo Visita Prenotata</th>
+              <th>Data</th>
+              <th>Orario</th>
+              <th>Note</th>
+              <th>Azioni</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let prenotazione of prenotazioni">
+              <td><strong>{{ prenotazione.tipoVisita }}</strong></td>
+              <td>{{ prenotazione.data }}</td>
+              <td>{{ prenotazione.orario }}</td>
+              <td>{{ prenotazione.note || 'Nessuna nota' }}</td>
+              <td>
+                <button class="btn btn-dark btn-sm" (click)="showDetails(prenotazione)">
+                  Dettagli
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="col-md-4" *ngIf="showBookingDetails">
+        <app-booking-details 
+          [prenotazione]="selectedBooking" 
+          (close)="closeDetails($event)"
+        ></app-booking-details>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #nessunaPrenotazione>
+    <p class="text-center">Non ci sono visite prenotate</p>
+  </ng-template>
+</div>
+
