@@ -1,3 +1,23 @@
+Questo progetto è un'applicazione Angular 19 standalone per la gestione delle prenotazioni di visite mediche. Permette agli utenti di registrarsi, effettuare il login e prenotare visite con specialisti in base alla disponibilità. Il backend è simulato con JSON Server per gestire i dati delle prenotazioni e degli utenti.
+
+Funzionalità principali:
+* Autenticazione: Registrazione e login degli utenti.
+* Gestione prenotazioni: Creazione, modifica e cancellazione di prenotazioni mediche.
+* Calendario disponibilità: Mostra le date e gli orari disponibili per ogni specialità medica.
+* Lista visite: Elenco delle visite prenotate dall'utente.
+* Dettaglio visita: Informazioni dettagliate su ogni prenotazione.
+* Area personale: Accesso ai dati personali e alle prenotazioni effettuate.
+* Navbar fissa: Navigazione semplificata tra le sezioni principali.
+
+Tecnologie utilizzate:
+* Angular 19 – Framework frontend per la gestione delle pagine e dei componenti.
+* TypeScript – Linguaggio di programmazione utilizzato in Angular.
+* Bootstrap – Libreria CSS per lo stile e il layout responsive.
+* JSON Server – Backend fittizio per simulare un'API REST e memorizzare dati su file db.json.
+* RxJS – Per la gestione asincrona dei dati (es. HTTP requests).
+* Angular Router – Per la navigazione tra le pagine dell'applicazione.
+
+
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
 
