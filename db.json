@@ -74,6 +74,14 @@
       "note": "",
       "data": "2025-03-01",
       "orario": "10:00"
+    },
+    {
+      "id": 27,
+      "utenteId": 3,
+      "tipoVisita": "Visita Cardiologica",
+      "note": "",
+      "data": "2025-03-01",
+      "orario": "14:00"
     }
   ],
   "disponibilita": [
@@ -82,10 +90,9 @@
       "tipoVisita": "Visita Cardiologica",
       "data": "2025-03-01",
       "orariDisponibili": [
-        "09:00",
         "10:00",
         "11:00",
-        "14:00"
+        "09:00"
       ]
     },
     {

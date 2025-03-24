@@ -4,11 +4,12 @@ import { Prenotazione } from '../../models/prenotazione.type';
 import { BookingService } from '../../services/booking.service';
 import { CommonModule } from '@angular/common';
 import { BookingDetailsComponent } from "../booking-details/booking-details.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [CommonModule, BookingDetailsComponent],
+  imports: [CommonModule, BookingDetailsComponent, RouterLink],
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.css']
 })
@@ -60,6 +61,26 @@ export class UserProfileComponent implements OnInit {
       this.fetchPrenotazioni();
     }
   }
+
+
+  
+  addToGoogleCalendar(prenotazione: Prenotazione) {
+    const startDate = new Date(prenotazione.data + 'T' + prenotazione.orario);
+    const endDate = new Date(startDate.getTime() + 30 * 60000); // Durata 30 minuti
+  
+    const start = startDate.toISOString().replace(/[-:.]/g, "").slice(0, 15) + "Z";
+    const end = endDate.toISOString().replace(/[-:.]/g, "").slice(0, 15) + "Z";
+  
+    const details = `Visita: ${prenotazione.tipoVisita}\nData: ${prenotazione.data}\nOrario: ${prenotazione.orario}\nInfo: ${prenotazione.note || 'Nessuna nota'}`;
+  
+    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(prenotazione.tipoVisita)}&dates=${start}/${end}&details=${encodeURIComponent(details)}`;
+  
+    window.open(url, "_blank");
+  }
+  
+
+
+
 }
 
 

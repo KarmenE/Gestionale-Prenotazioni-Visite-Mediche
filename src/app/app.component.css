@@ -19,11 +19,11 @@ color: rgb(128, 76, 12);
 
 /* Stili specifici per il link di login */
 .login-link {
-color: orange;
+color: greenyellow;
 }
 
 .login-link:hover {
-color: rgb(128, 76, 12);
+color: green;
 }
 
 /* Puoi definire stili differenti per il link di logout, se necessario */
