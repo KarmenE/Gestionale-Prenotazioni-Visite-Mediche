@@ -23,10 +23,12 @@
               <td>{{ prenotazione.data }}</td>
               <td>{{ prenotazione.orario }}</td>
               <td>{{ prenotazione.note || 'Nessuna nota' }}</td>
-              <td>
+              <td class="d-flex justify-content-around">
                 <button class="btn btn-dark btn-sm" (click)="showDetails(prenotazione)">
                   Dettagli
                 </button>
+                <button  class="btn btn-dark btn-sm" (click)="addToGoogleCalendar(prenotazione)">Aggiungi al calendario</button>
+                <!-- <button  class="btn btn-dark btn-sm" (click)="addToCalendar(prenotazione)">Aggiungi al calendario</button> -->
               </td>
             </tr>
           </tbody>
@@ -45,5 +47,10 @@
   <ng-template #nessunaPrenotazione>
     <p class="text-center">Non ci sono visite prenotate</p>
   </ng-template>
+
+</div>
+
+<div class="container text-center">
+  <button class="btn btn-dark" routerLink="/visit-list">Torna a Visite Mediche</button>
 </div>
 
