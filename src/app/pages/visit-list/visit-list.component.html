@@ -1,22 +1,19 @@
 
 <div class="container my-4">
-  <h1 class="text-center mb-4">Visite Mediche Disponibili</h1>
-  
+  <h1 class="text-center mb-4 titolo">VISITE MEDICHE DISPONIBILI</h1>
+
   <div class="row">
-    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let visita of visite">
-      <div class="card shadow-sm border-5 rounded-3 h-100">
-        <div class="card-body">
-          <h5 class="card-title">{{ visita.tipoVisita }}</h5>
-          <p class="card-text text-muted">{{ visita.descrizione }}</p>
-          <hr>
-          <p><strong>Prezzo:</strong> €{{ visita.prezzo }},00</p>
-          <p><strong>Durata:</strong> {{ visita.durata }}</p>
-          <div class="d-flex justify-content-center">
-            <button class="btn btn-outline-dark w-75 mt-2 mx-auto d-block" (click)="vaiAllaDescrizione(visita)">Dettagli</button>
-          </div>
-        </div>
+    <div class="col-md-6 col-lg-6 mb-4" *ngFor="let visita of visite">
+      <div class="visita-box">
+        <h5 class="visita-tipo">{{ visita.tipoVisita }}</h5>
+        <p class="visita-descrizione">{{ visita.descrizione }}</p>
+        <hr>
+        <p><strong>Prezzo:</strong> €{{ visita.prezzo }},00</p>
+        <p><strong>Durata:</strong> {{ visita.durata }}</p>
+        <button class="btn-dettagli" (click)="vaiAllaDescrizione(visita)">Dettagli</button>
       </div>
     </div>
   </div>
 </div>
+
 
