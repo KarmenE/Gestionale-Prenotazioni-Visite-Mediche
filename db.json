@@ -60,14 +60,6 @@
       "id": 24
     },
     {
-      "id": 25,
-      "utenteId": 3,
-      "tipoVisita": "Visita Oculistica",
-      "note": "",
-      "data": "2025-03-01",
-      "orario": "11:00"
-    },
-    {
       "id": 26,
       "utenteId": 3,
       "tipoVisita": "Visita Pneumologica",
@@ -112,8 +104,9 @@
       "data": "2025-03-01",
       "orariDisponibili": [
         "10:00",
-        "09:00",
-        "14:00"
+        "14:00",
+        "11:00",
+        "09:00"
       ]
     },
     {
