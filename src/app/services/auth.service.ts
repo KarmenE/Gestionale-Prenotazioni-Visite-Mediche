@@ -27,7 +27,7 @@ export class AuthService {
   //   });
   // }
 
-  // VERSIONE CON SNACKBAR :
+  // VERSIONE CON SNACKBAR funzionante: 
   register(id: number, nome: string, cognome: string, cf: string, email: string, password: string, user: User) {
     this.http.post<any>(`${this.apiUrl}/register`, user).subscribe(() => {
       this.snackBar.open('Registrazione effettuata con successo', 'Ok', {
@@ -44,20 +44,7 @@ export class AuthService {
   }
 
 
-  // login(email: string, password: string) : Observable<User | null> {
-  //   return this.http.post<User>(`${this.apiUrl}/login`, { email, password }).pipe(
-  //     tap((response: User) => {
-  //       console.log('Risposta dal backend:', response);
-  //       localStorage.setItem('accessToken', response.accessToken);
-  //       this.router.navigate(['/user-profile']);
-  //     }),
-  //     catchError(() => {
-  //       alert('Errore nel login');
-  //       return of (null);
-  //     })
-  //   )
 
-  // }
 
   login(email: string, password: string): Observable<{ accessToken: string, user: User } | null> {
     return this.http.post<{ accessToken: string, user: User }>(`${this.apiUrl}/login`, { email, password }).pipe(
@@ -68,6 +55,10 @@ export class AuthService {
         if (response.user && response.user.id) {
           // Salva l'ID dell'utente nel localStorage
           localStorage.setItem('userId', response.user.id.toString());  // Assicurati che sia una stringa
+
+          localStorage.setItem('email', response.user.email);
+
+
           // Salva il token di accesso
           localStorage.setItem('accessToken', response.accessToken);
           // Reindirizza alla pagina dell'area personale
@@ -85,15 +76,12 @@ export class AuthService {
   }
   
   
+  
 
   logout() {
     localStorage.removeItem('accessToken');
     this.router.navigate(['/login']);
   }
-
-  // isAuthenticated(): boolean {
-  //   return localStorage.getItem('accessToken') !== null;
-  // }
 
   isAuthenticated(): boolean {
     return localStorage.getItem('accessToken') ? true: false;
