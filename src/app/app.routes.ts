@@ -17,21 +17,11 @@ export const routes: Routes = [
 
     { path: "visit-description/:tipoVisita", loadComponent: () => import('./pages/visit-description/visit-description.component').then((c) => c.VisitDescriptionComponent) },
 
-
-
     { path: "user-profile", loadComponent: () => import('./pages/user-profile/user-profile.component').then((c) => c.UserProfileComponent), canActivate: [AuthGuard],
         
         children:[{ path: ":id", loadComponent: () => import('./pages/booking-details/booking-details.component').then((c) => c.BookingDetailsComponent)}]},
 
-
-
-    //{ path: "booking-details/:id", loadComponent: () => import('./pages/booking-details/booking-details.component').then((c) => c.BookingDetailsComponent), canActivate: [AuthGuard] }, 
-
     { path: "availability-calendar/:tipoVisita", loadComponent: () => import('./pages/availability-calendar/availability-calendar.component').then((c) => c.AvailabilityCalendarComponent), canActivate: [AuthGuard] },
-
-    // { path : "booking-edit/:id", loadComponent: () => import('./pages/booking-edit/booking-edit.component').then((c) => c.BookingEditComponent), canActivate: [AuthGuard] },
-
-    
 
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
