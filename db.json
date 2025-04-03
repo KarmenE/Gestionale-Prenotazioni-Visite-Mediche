@@ -10,11 +10,11 @@
     },
     {
       "email": "karmenkarmen1717@gmail.com",
-      "password": "$2a$10$kfGxcxurwv2PIsmYusCPaOnZXsvG5zHM2Z2JH9k8h20cHfXUpeRoS",
-      "name": "Carmen",
-      "surname": "Elena",
-      "cf": "SLTCMN92P57Z129K",
-      "id": 4
+      "password": "$2a$10$BsgIXcTJTsRDbDSF4bvq8Ok.iOCF/c6z6waugJXbxfETLKZNNTBr.",
+      "id": 4,
+      "nome": "Soltanel",
+      "cognome": "Carmen",
+      "CF": "SLTCMN92P57Z129K"
     }
   ],
   "visite": [

@@ -2,16 +2,16 @@
 <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="card p-4 shadow" style="width: 500px;">
 
-      <form (ngSubmit)="onRegister(registerForm.value)" #registerForm="ngForm">
+      <form (ngSubmit)="onRegister()" #registerForm="ngForm">
         <h2 class="text-center mb-4">Registrazione</h2>
         <div class="mb-3">
           <label for="name" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="name" name="name" required autofocus placeholder="Nome" [(ngModel)]="nome">
+          <input type="text" class="form-control" id="name" name="name" required autofocus placeholder="Nome" [(ngModel)]="user.nome">
         </div>
         
         <div class="mb-3">
           <label for="surname" class="form-label">Cognome</label>
-          <input type="text" class="form-control" id="surname" name="surname" required placeholder="Cognome" [(ngModel)]="cognome">
+          <input type="text" class="form-control" id="surname" name="surname" required placeholder="Cognome" [(ngModel)]="user.cognome">
         </div>
 
         <div class="mb-3">
@@ -23,7 +23,7 @@
             name="cf" 
             required 
             placeholder="Codice Fiscale" 
-            [(ngModel)]="cf"
+            [(ngModel)]="user.CF"
             pattern="[A-Z0-9]{16}"
             style="text-transform: uppercase;"
           >
@@ -35,12 +35,12 @@
         
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="email" required placeholder="Email" [(ngModel)]="email">
+          <input type="email" class="form-control" id="email" name="email" required placeholder="Email" [(ngModel)]="user.email">
         </div>
         
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" name="password" required placeholder="Password" [(ngModel)]="password">
+          <input type="password" class="form-control" id="password" name="password" required placeholder="Password" [(ngModel)]="user.password">
         </div>
         
         <div class="d-flex justify-content-center">
