@@ -8,6 +8,8 @@ Funzionalità principali:
 * Dettaglio visita: Informazioni dettagliate su ogni prenotazione.
 * Area personale: Accesso ai dati personali e alle prenotazioni effettuate.
 * Navbar fissa: Navigazione semplificata tra le sezioni principali.
+* Possibilità di aggiungere le prenotazioni al Calendario Google.
+* Tema chiaro/scuro per una migliore esperienza utente.
 
 Tecnologie utilizzate:
 * Angular 19 – Framework frontend per la gestione delle pagine e dei componenti.
@@ -16,6 +18,7 @@ Tecnologie utilizzate:
 * JSON Server – Backend fittizio per simulare un'API REST e memorizzare dati su file db.json.
 * RxJS – Per la gestione asincrona dei dati (es. HTTP requests).
 * Angular Router – Per la navigazione tra le pagine dell'applicazione.
+* Angular Material
 
 
 
