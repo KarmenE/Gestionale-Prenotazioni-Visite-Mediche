@@ -1,12 +1,122 @@
 
-body {
-    padding-top: 80px; /* spazio per la navbar fixed */
-}
+body { padding-top: 80px; }  /* spazio per la navbar fixed */
+
 html, body { height: 100%; }
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.mat-mdc-snack-bar-container {
-    margin-top: 90px !important;
+.mat-mdc-snack-bar-container { margin-top: 90px !important; }
+
+  
+/*per il cambio tema modifiche per ogni componente*/
+
+:root {
+  --bg-light: white;
+  --text-light: black;
+  --bg-dark: black;
+  --text-dark: white;
+  --button-bg-dark: black;
+  --button-border-dark: white;
+  --card-bg-dark: black;
+  --card-border-dark: white;
+  --tbody-bg-dark: black;
+  --tbody-border-dark: white;
+  --form-label-dark: white;
+}
+  
+.bg-light-custom {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+.bg-dark-custom {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.arancione {
+  color: orange;
+}
+
+.dark-theme {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+  
+.dark-theme .card {
+  background-color: var(--card-bg-dark);
+  border: 1px solid var(--card-border-dark);
+  color: var(--text-dark);
+}
+
+.dark-theme .card-header {
+  color: var(--text-dark);
+}
+
+.dark-theme tbody {
+  background-color: var(--tbody-bg-dark);
+  color: var(--text-dark);
+  border: 1px solid var(--tbody-border-dark);
+}
+  
+.dark-theme .btn-dark {
+  background-color: var(--button-bg-dark);
+  border: 1px solid var(--button-border-dark);
+  color: var(--text-dark);
+}
+  
+.dark-theme .container {
+  background-color: var(--bg-dark);
+  border: 1px solid var(--border-dark);
+  color: var(--text-dark);
+  .form-label {
+    color: var(--form-label-dark);
+  }
+}
+  
+.dark-theme h1, dark-theme p {
+  color: var(--text-dark);
+}
+  
+.dark-theme .visita-box {
+  background-color: var(--bg-dark) !important; 
+  color: var(--text-dark) !important;
+  box-shadow: 1px 1px 5px rgb(204, 135, 7) !important;
+  .btn-dettagli {
+    background-color: var(--button-bg-dark);
+    color: var(--text-dark);
+  }
+  h1 {
+    color: var(--text-dark);
+  }
+  .visita-descrizione {
+    color: var(--text-dark);
+  }
+}
+
+.dark-theme .list-header span {
+  color : var(--text-light);
+}
+
+.dark-theme .navVoices a:not(.login-link):not(.logout-link) {
+  color: white;
+}
+
+.dark-theme .navVoices a:not(.login-link):not(.logout-link):hover {
+  color: orange;
+}
+
+.dark-theme footer a {
+  color: white; 
+}
+
+.dark-theme .leaflet-routing-container {
+  color: black !important;
+}
+
+
+.dark-theme .btn-close {
+  filter: invert(1); /* inverte il colore dell'icona X da nero a bianco */
 }
 
 
