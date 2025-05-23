@@ -16,6 +16,7 @@ body {
     border-radius: 12px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.2s ease-in-out;
+    margin: 5px;
 }
 
 .visita-box:hover {
@@ -46,6 +47,7 @@ body {
 }
 
 .btn-dettagli:hover {
-    background-color: black;
     color: orange;
 }
+
+

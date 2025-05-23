@@ -103,7 +103,7 @@ export class VisitListComponent {
   ngOnInit(): void {}
 
   prenota(visita: Visita): void {
-    // Naviga verso il calendario passando il tipoVisita come parametro
+    // naviga verso il calendario passando il tipoVisita come parametro
     this.router.navigate(['/availability-calendar', visita.tipoVisita]);
   }
 

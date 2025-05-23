@@ -1,12 +1,40 @@
 
-  .social-icons a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-    margin-right: 10px;
-  }
+a[href^="tel:"] {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a[href^="tel:"]:hover {
+  color: orange;
+}
+
+a[href^="mailto:"] {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a[href^="mailto:"]:hover {
+  color: orange;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  color: orange;
+}
   
-  .social-icons a:hover {
-    color: #f79504;
-  }
-  
+/*selettore globale dentro il CSS del componente*/
+:host-context(.dark-theme) .social-icons a {
+  color: white;
+}
+
+:host-context(.dark-theme) .social-icons a:hover {
+  color: orange;
+}

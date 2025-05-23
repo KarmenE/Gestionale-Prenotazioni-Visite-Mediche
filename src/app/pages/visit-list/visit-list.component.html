@@ -2,18 +2,16 @@
 <div class="container my-4">
   <h1 class="text-center mb-4 titolo">VISITE MEDICHE DISPONIBILI</h1>
 
-  <div class="row">
+  <div class="row mycard">
     <div class="col-md-6 col-lg-6 mb-4" *ngFor="let visita of visite">
       <div class="visita-box">
         <h5 class="visita-tipo">{{ visita.tipoVisita }}</h5>
         <p class="visita-descrizione">{{ visita.descrizione }}</p>
         <hr>
-        <p><strong>Prezzo:</strong> €{{ visita.prezzo }},00</p>
-        <p><strong>Durata:</strong> {{ visita.durata }}</p>
+        <p class="info"><strong>Prezzo:</strong> €{{ visita.prezzo }},00</p>
+        <p class="info"><strong>Durata:</strong> {{ visita.durata }}</p>
         <button class="btn-dettagli" (click)="vaiAllaDescrizione(visita)">Dettagli</button>
       </div>
     </div>
   </div>
 </div>
-
-

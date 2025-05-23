@@ -185,7 +185,7 @@ export class VisitDescriptionComponent implements OnInit {
   }
 
   prenota(): void {
-    // Esempio: navigare alla pagina di prenotazione con il tipoVisita come parametro
+    // navigare alla pagina di prenotazione con il tipoVisita come parametro
     this.router.navigate(['/availability-calendar', this.visita.tipoVisita]);
   }
   

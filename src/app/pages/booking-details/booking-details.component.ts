@@ -70,7 +70,7 @@ export class BookingDetailsComponent implements OnInit {
 
   editPrenotazione(): void {
     if (this.prenotazione) {
-      // Passa il bookingId come query param per entrare in modalità modifica
+      // passo il bookingId come query param per entrare in modalità modifica
       this.router.navigate(
         ['/availability-calendar', this.prenotazione.tipoVisita],
         { queryParams: { bookingId: this.prenotazione.id } }
