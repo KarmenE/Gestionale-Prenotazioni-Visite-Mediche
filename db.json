@@ -7,23 +7,15 @@
       "surname": "soltanel",
       "cf": "SLTCMN92P57Z129K",
       "id": 3
-    },
-    {
-      "email": "karmenkarmen1717@gmail.com",
-      "password": "$2a$10$BsgIXcTJTsRDbDSF4bvq8Ok.iOCF/c6z6waugJXbxfETLKZNNTBr.",
-      "id": 4,
-      "nome": "Soltanel",
-      "cognome": "Carmen",
-      "CF": "SLTCMN92P57Z129K"
     }
   ],
   "visite": [
     {
       "id": 1,
-      "tipoVisita": "Visita Cardiologica",
-      "descrizione": "Valutazione completa del sistema cardiovascolare",
-      "durata": "30 minuti",
-      "prezzo": 50
+      "tipoVisita": "",
+      "descrizione": "",
+      "durata": "",
+      "prezzo": 0
     }
   ],
   "prenotazioni": [
@@ -68,20 +60,28 @@
       "id": 24
     },
     {
+      "id": 36,
       "utenteId": 3,
       "tipoVisita": "Visita Cardiologica",
+      "note": "",
+      "data": "2025-03-01",
+      "orario": "14:00"
+    },
+    {
+      "utenteId": 5,
+      "tipoVisita": "Visita Pneumologica",
       "data": "2025-03-01",
       "orario": "11:00",
       "note": "",
-      "id": 31
+      "id": 39
     },
     {
-      "utenteId": 4,
-      "tipoVisita": "Visita Cardiologica",
+      "utenteId": 3,
+      "tipoVisita": "Visita Dermatologica",
       "data": "2025-03-01",
-      "orario": "10:00",
+      "orario": "15:00",
       "note": "",
-      "id": 32
+      "id": 40
     }
   ],
   "disponibilita": [
@@ -90,7 +90,8 @@
       "tipoVisita": "Visita Cardiologica",
       "data": "2025-03-01",
       "orariDisponibili": [
-        "14:00",
+        "11:00",
+        "10:00",
         "09:00"
       ]
     },
@@ -100,9 +101,8 @@
       "data": "2025-03-01",
       "orariDisponibili": [
         "12:00",
-        "15:00",
-        "10:00",
-        "11:00"
+        "11:00",
+        "10:00"
       ]
     },
     {
@@ -110,10 +110,10 @@
       "tipoVisita": "Visita Oculistica",
       "data": "2025-03-01",
       "orariDisponibili": [
-        "10:00",
         "14:00",
-        "11:00",
-        "09:00"
+        "09:00",
+        "10:00",
+        "11:00"
       ]
     },
     {
@@ -165,10 +165,10 @@
       "tipoVisita": "Visita Neurologica",
       "data": "2025-03-01",
       "orariDisponibili": [
-        "10:00",
         "11:00",
         "12:00",
-        "15:00"
+        "15:00",
+        "10:00"
       ]
     },
     {
@@ -187,7 +187,6 @@
       "tipoVisita": "Visita Pneumologica",
       "data": "2025-03-01",
       "orariDisponibili": [
-        "11:00",
         "12:00",
         "10:00",
         "15:00"

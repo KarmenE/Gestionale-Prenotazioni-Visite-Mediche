@@ -50,13 +50,9 @@ export class UserProfileComponent implements OnInit {
     );
   }
 
-  // closeDetails(): void {
-  //   this.showBookingDetails = false;
-  // }
-
   closeDetails(deleted: boolean = false): void {
     this.showBookingDetails = false;
-    // Se è stato eliminato, aggiorniamo la lista delle prenotazioni
+    // se è stato eliminato, aggiorno la lista delle prenotazioni
     if (deleted) {
       this.fetchPrenotazioni();
     }
@@ -66,7 +62,7 @@ export class UserProfileComponent implements OnInit {
   
   addToGoogleCalendar(prenotazione: Prenotazione) {
     const startDate = new Date(prenotazione.data + 'T' + prenotazione.orario);
-    const endDate = new Date(startDate.getTime() + 30 * 60000); // Durata 30 minuti
+    const endDate = new Date(startDate.getTime() + 30 * 60000); // durata 30 minuti
   
     const start = startDate.toISOString().replace(/[-:.]/g, "").slice(0, 15) + "Z";
     const end = endDate.toISOString().replace(/[-:.]/g, "").slice(0, 15) + "Z";

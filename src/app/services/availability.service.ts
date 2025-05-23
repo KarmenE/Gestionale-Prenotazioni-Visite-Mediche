@@ -13,7 +13,7 @@ export class AvailabilityService {
 
   constructor(private http: HttpClient) {}
 
-  // Recupera la disponibilità per il tipo di visita e data (in caso ce ne siano più, ne usa il primo)
+  // recupera la disponibilità per il tipo di visita e data (in caso ce ne siano più, ne usa il primo)
   getDisponibilita(tipoVisita: string, data: string): Observable<Disponibilita | undefined> {
     return this.http.get<Disponibilita[]>(`${this.apiUrl}/disponibilita?tipoVisita=${tipoVisita}&data=${data}`)
       .pipe(
@@ -21,12 +21,12 @@ export class AvailabilityService {
       );
   }
 
-  // Aggiorna una voce di disponibilità (PUT sul json-server)
+  // aggiorna una voce di disponibilità (PUT su json-server)
   updateDisponibilita(disponibilita: Disponibilita): Observable<Disponibilita> {
     return this.http.put<Disponibilita>(`${this.apiUrl}/disponibilita/${disponibilita.id}`, disponibilita);
   }
 
-  // Rimuove un orario dalla disponibilità
+  // rimuove un orario dalla disponibilità
   removeOrarioDisponibilita(availabilityId: number, orario: string): Observable<Disponibilita> {
     return this.http.get<Disponibilita>(`${this.apiUrl}/disponibilita/${availabilityId}`)
       .pipe(
@@ -42,7 +42,7 @@ export class AvailabilityService {
       );
   }
 
-  // Ripristina un orario in una voce di disponibilità (se non già presente)
+  // ripristina un orario in una voce di disponibilità (se non presente)
   restoreOrarioDisponibilita(tipoVisita: string, data: string, orario: string): Observable<Disponibilita | null> {
     return this.getDisponibilita(tipoVisita, data)
       .pipe(

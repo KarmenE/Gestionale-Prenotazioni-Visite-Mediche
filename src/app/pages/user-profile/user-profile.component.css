@@ -1,2 +1,51 @@
 
+.prenotazioni-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: 1px solid #ccc; 
+  }
+  
+  .list-header,
+  .list-row {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #ccc; 
+    
+  }
+  
+  .list-cell {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .list-header {
+    font-weight: bold;
+    background-color: #f0f0f0;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .dark-theme .prenotazioni-list {
+    border: 1px solid white;
+  }
+  
+  .dark-theme .list-header {
+    background-color: #222;
+    color: orange;
+  }
+  
+  .dark-theme .list-row {
+    border-bottom: 1px solid white;
+    color: white;
+  }
+  
+  .dark-theme .list-cell {
+    color: white;
+  }
   

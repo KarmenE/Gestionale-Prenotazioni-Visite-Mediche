@@ -1,41 +1,45 @@
 
-<div class="w-100 p-2 d-flex justify-content-between align-items-center fixed-top" style="background-color: black;">
+<nav class="w-100 p-2 d-flex justify-content-between align-items-center fixed-top" >
     <div class="d-flex align-items-center mx-2">
         <a routerLink="/homepage" class="d-flex align-items-center mx-2">
-            <img src="/images/logo.png" alt="logo" style="height: 70px; width: auto;">
+            <img src="/images/logo.png" alt="logo" class="logo">
         </a>
     </div>
 
     <div class="d-flex">
-        <div class="mx-2">
+        <div class="navVoices mx-2">
             <a href="/homepage">Homepage</a>
         </div>
 
-        <div class="mx-2">
+        <div class="navVoices mx-2">
             <a *ngIf="isAuthenticated(); else loginLink" routerLink="/login" (click)="logout()" class="logout-link">Logout</a>
             <ng-template #loginLink>
               <a routerLink="/login" class="login-link">Login</a>
             </ng-template>
         </div>
           
-        <div class="mx-2">
+        <div class="navVoices mx-2">
             <a href="/register">Registrati</a>
         </div>
 
-        <div class="mx-2">
+        <div class="navVoices mx-2">
             <a href="/contacts">Contatti</a>
         </div>
 
-        <div class="mx-2">
+        <div class="navVoices mx-2">
             <a href="/visit-list">Visite Mediche</a>
         </div>
 
-        <div class="mx-2">
+        <div class="navVoices mx-2">
             <a href="/user-profile">Area Personale</a>
         </div>
 
+        <button (click)="toggleTheme()">
+            <img src="/images/icona tema.png" alt="icona">
+        </button>
+
     </div>
-</div>
+</nav>
 
 
 <router-outlet />

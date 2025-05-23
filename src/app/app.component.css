@@ -1,38 +1,52 @@
-/* a {
-    text-decoration: none;
-    color: orange;
-}
-
-a:hover {
-    color: rgb(128, 76, 12);
-} */
 
 a {
-text-decoration: none;
-color: orange;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: larger;
 }
 
 a:hover {
-color: rgb(128, 76, 12);
+  color: rgb(128, 76, 12);
 }
 
+.navVoices:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
 
-/* Stili specifici per il link di login */
+.logo {
+  height: 70px;
+  width: auto;
+}
+
 .login-link {
-color: greenyellow;
+  color: green;
 }
 
 .login-link:hover {
-color: green;
+  color: greenyellow;
 }
 
-/* Puoi definire stili differenti per il link di logout, se necessario */
 .logout-link {
-color: red;
+  color: red;
 }
 
 .logout-link:hover {
-/* Imposta un colore diverso per l'hover, se lo desideri */
-color: darkred;
+  color: darkred;
 }
-  
+
+nav button {
+  padding: 0; 
+  cursor: pointer; 
+  border: none; 
+  border-radius: 50%; 
+  width: 30px; 
+  height: 30px; 
+  display: flex; 
+  justify-content: center; 
+  margin: 0 10px; 
+}
+
+
+

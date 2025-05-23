@@ -1,56 +1,40 @@
+<!-- tabella con gli span (invece di table) per modalità scura perché lo sfondo della tabella non cambiava: -->
 
 <div class="container my-5">
   <h1 class="text-center">Area Personale</h1> <br>
-  
   <div *ngIf="prenotazioni.length > 0; else nessunaPrenotazione">
     <div class="row justify-content-center">
-      
       <div [ngClass]="{'col-md-8': showBookingDetails, 'col-md-12': !showBookingDetails}">
-        
-        <table class="table table-bordered text-center">
-          <thead class="table-dark">
-            <tr>
-              <th>Tipo Visita Prenotata</th>
-              <th>Data</th>
-              <th>Orario</th>
-              <th>Note</th>
-              <th>Azioni</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let prenotazione of prenotazioni">
-              <td><strong>{{ prenotazione.tipoVisita }}</strong></td>
-              <td>{{ prenotazione.data }}</td>
-              <td>{{ prenotazione.orario }}</td>
-              <td>{{ prenotazione.note || 'Nessuna nota' }}</td>
-              <td class="d-flex justify-content-around">
-                <button class="btn btn-dark btn-sm" (click)="showDetails(prenotazione)">
-                  Dettagli
-                </button>
-                <button  class="btn btn-dark btn-sm" (click)="addToGoogleCalendar(prenotazione)">Aggiungi al calendario</button>
-                <!-- <button  class="btn btn-dark btn-sm" (click)="addToCalendar(prenotazione)">Aggiungi al calendario</button> -->
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <ul class="prenotazioni-list">
+          <li class="list-header">
+            <span class="list-cell">Tipo Visita Prenotata</span>
+            <span class="list-cell">Data</span>
+            <span class="list-cell">Orario</span>
+            <span class="list-cell">Note</span>
+            <span class="list-cell">Azioni</span>
+          </li>
+          <li class="list-row" *ngFor="let prenotazione of prenotazioni">
+            <span class="list-cell"><strong>{{ prenotazione.tipoVisita }}</strong></span>
+            <span class="list-cell">{{ prenotazione.data }}</span>
+            <span class="list-cell">{{ prenotazione.orario }}</span>
+            <span class="list-cell">{{ prenotazione.note || 'Nessuna nota' }}</span>
+            <span class="list-cell actions">
+              <button class="btn btn-dark btn-sm" (click)="showDetails(prenotazione)">Dettagli</button>
+              <button class="btn btn-dark btn-sm" (click)="addToGoogleCalendar(prenotazione)">Aggiungi al calendario</button>
+            </span>
+          </li>
+        </ul>
       </div>
-      
       <div class="col-md-4" *ngIf="showBookingDetails">
-        <app-booking-details 
-          [prenotazione]="selectedBooking" 
-          (close)="closeDetails($event)"
-        ></app-booking-details>
+        <app-booking-details [prenotazione]="selectedBooking" (close)="closeDetails($event)"></app-booking-details>
       </div>
     </div>
   </div>
-  
   <ng-template #nessunaPrenotazione>
     <p class="text-center">Non ci sono visite prenotate</p>
   </ng-template>
-
 </div>
 
 <div class="container text-center">
   <button class="btn btn-dark" routerLink="/visit-list">Vai a Visite Mediche</button>
 </div>
-
